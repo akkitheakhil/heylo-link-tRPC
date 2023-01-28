@@ -1,10 +1,7 @@
 import HeyloLoader from '../heylo-loader/heylo-loader';
 import styles from './heylo-screen-loader.module.scss';
 
-/* eslint-disable-next-line */
-export interface HeyloScreenLoaderProps {}
-
-export function HeyloScreenLoader(props: HeyloScreenLoaderProps) {
+export function HeyloScreenLoader() {
   return (
     <div className={styles['container']}>
       <HeyloLoader />

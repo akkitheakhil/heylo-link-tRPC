@@ -11,7 +11,6 @@ export interface HeyloSEOHeaderProps {
 export function HeyloSEOHeader({
   title,
   description,
-  ogImage,
   ogType = 'website',
 }: HeyloSEOHeaderProps) {
   return (

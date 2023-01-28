@@ -1,9 +1,6 @@
 import styles from './heylo-loader.module.scss';
 
-/* eslint-disable-next-line */
-export interface HeyloLoaderProps {}
-
-export function HeyloLoader(props: HeyloLoaderProps) {
+export function HeyloLoader() {
   return (
     <div className={styles['loader']}>
     </div>

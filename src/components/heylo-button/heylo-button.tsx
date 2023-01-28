@@ -5,7 +5,7 @@ export interface HeyloButtonProps {
   label?: string;
   color: 'PRIMARY' | 'SECONDARY';
   width?: string;
-  onClick?: (e: any) => void;
+  onClick?: (e: unknown) => void;
 }
 
 export function HeyloButton(
