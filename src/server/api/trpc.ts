@@ -21,11 +21,11 @@ export const createTRPCContext = async (opts: CreateNextContextOptions) => {
     req,
     res,
   });
-  if (isDataNotEmpty(session) && session.hasOwnProperty("expires")) {
-    return createInnerTRPCContext({
-      session,
-    });
-  }
+  // if (isDataNotEmpty(session) && session.hasOwnProperty("expires")) {
+  //   return createInnerTRPCContext({
+  //     session,
+  //   });
+  // }
 
   return createInnerTRPCContext({
     session: null,
@@ -34,7 +34,6 @@ export const createTRPCContext = async (opts: CreateNextContextOptions) => {
 
 import { initTRPC, TRPCError } from "@trpc/server";
 import superjson from "superjson";
-import { isDataNotEmpty } from "../../utils/common-utils";
 
 const t = initTRPC.context<typeof createTRPCContext>().create({
   transformer: superjson,
