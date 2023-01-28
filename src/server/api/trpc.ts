@@ -22,7 +22,7 @@ export const createTRPCContext = async (opts: CreateNextContextOptions) => {
     res,
   });
 
-  if (session && session.user) {
+  if (isDataNotEmpty(session)) {
     return createInnerTRPCContext({
       session,
     });
@@ -35,6 +35,7 @@ export const createTRPCContext = async (opts: CreateNextContextOptions) => {
 
 import { initTRPC, TRPCError } from "@trpc/server";
 import superjson from "superjson";
+import { isDataNotEmpty } from "../../utils/common-utils";
 
 const t = initTRPC.context<typeof createTRPCContext>().create({
   transformer: superjson,
