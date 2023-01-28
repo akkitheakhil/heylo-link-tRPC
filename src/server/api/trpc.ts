@@ -21,14 +21,9 @@ export const createTRPCContext = async (opts: CreateNextContextOptions) => {
     req,
     res,
   });
-  // if (isDataNotEmpty(session) && session.hasOwnProperty("expires")) {
-  //   return createInnerTRPCContext({
-  //     session,
-  //   });
-  // }
 
   return createInnerTRPCContext({
-    session: null,
+    session,
   });
 };
 
