@@ -30,6 +30,10 @@ export function isDataNotEmpty<T>(value: T): value is NonNullable<T> {
   return true;
 }
 
+// export function hasValidSession(value: unknown): value is NonNullable<Session> {
+//   return value && typeof value === 'object' ;
+// }
+
 export const addHttpPrefix = (url: string): string => {
   if (!/^https?:\/\//i.test(url)) {
     url = "http://" + url;
